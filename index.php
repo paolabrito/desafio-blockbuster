@@ -1,3 +1,8 @@
+<?php require("conexao.php")?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,31 +92,26 @@
                 <table class="table table-striped">
                     <thead>
                       <tr>
-                        <th scope="col">Posição</th>
-                        <th scope="col">Filme</th>
-                        <th scope="col">Diretor</th>
+                        <th scope="col">Título</th>
                         <th scope="col">Preço</th>
+                        <th scope="col">Duração</th>
+                        <th scope="col">Ano de Lançamento</th>
+                        <th scope="col">Classificação</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <?php 
+                        foreach ($filme as $row) { ?>
+                            <td><?php echo($row["titulo"]) ?></td>
+                            <td><?php echo($row["preco_da_locacao"]) ?></td>
+                            <td><?php echo($row["duracao_do_filme"]) ?></td>
+                            <td><?php echo($row["ano_de_lancamento"]) ?></td>
+                            <td><?php echo($row["classificacao"]) ?></td>
+                        
                       </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
+                      <?php } ?>
+
                     </tbody>
                 </table>
             </div>
