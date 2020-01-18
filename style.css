@@ -47,6 +47,13 @@ h1{
     text-align: center;
     box-shadow: rgba(0,0,0,0.75);
 }
+#table{
+    margin: 140px;
+}
+th, td {
+    color: #fff;
+    font-size: 1em;
+}
 .footerbar{
     height: 80px;
     width: 100%;
