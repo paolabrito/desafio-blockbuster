@@ -22,9 +22,15 @@ try {
 } catch(PDOException $e) {
     echo 'ERROR: ' . $e->getMessage();
 }
-    foreach ($categoria as $row) {
-        echo ($row["nome"]);
+    foreach ($filme as $row) {
+        
+        echo ($row["titulo"]);
+        echo ($row["preco_da_locacao"]);
+        echo ($row["duracao_do_filme"]);
+        echo ($row["ano_de_lancamento"]);
+        echo ($row["classificacao"]);
+
     }
 
-    
+
 ?>
